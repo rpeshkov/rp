@@ -1,0 +1,94 @@
+@import 'bourbon';
+@import 'neat';
+@import 'node_modules/normalize.css/normalize';
+
+@import 'variables';
+
+@import 'base';
+@import 'layout';
+
+@import 'blog';
+
+@import 'components/navigation';
+@import 'components/widgets';
+
+@import 'code';
+
+small, .font_small {font-size: 0.833em;}
+
+.wrapper {
+    max-width: $site-width-mobile;
+    flex-direction: column;
+
+    @media screen and (min-width: $site-width-desktop) {
+        max-width: $site-width-desktop;
+        flex-direction: row;
+    }
+
+    @include margin(0 auto);
+    @include padding(0 2rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-container {
+    min-height: 70%;
+    min-height: calc(100vh - 60px - 60px - 4rem);
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+
+    p:first-child {
+        margin-top: 0;
+    }
+}
+
+.sidebar {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    @media screen and (min-width: $site-width-desktop) {
+        margin-left: 2rem;
+        &--index {
+            margin-left: 0;
+            margin-right: 2rem;
+        }
+
+
+        flex: 0 0 215px;
+    }
+
+    // opacity: .2;
+    // transition: 3s opacity ease-in-out;
+
+    // &:hover {
+    //     opacity: 1;
+    //     transition: .2s opacity ease-in-out;
+    // }
+
+    .widget {
+        margin-bottom: .5rem;
+        padding-bottom: .5rem;
+        border-bottom: 1px dotted #ddd;
+
+        ul {
+            padding: 0;
+            list-style-position: inside;
+        }
+    }
+    .widget:last-child { margin-bottom: 0; border-bottom: 0; }
+}
+
+.logo {
+    align-self: center;
+    color: $text-color;
+    line-height: 0.75;
+
+
+    small {
+        font-size: 60%;
+        color: #93a1a1;
+    }
+}

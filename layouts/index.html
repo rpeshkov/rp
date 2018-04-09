@@ -1,0 +1,11 @@
+{{ partial "header" . }}
+
+<div class="wrapper wrapper content-container">
+    {{ partial "index/sidebar" . }}
+
+    <main class="content content--index">
+        {{ .Content }}
+    </main>
+</div>
+
+{{ partial "footer" . }}

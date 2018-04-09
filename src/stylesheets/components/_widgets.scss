@@ -1,0 +1,14 @@
+.widget {
+    font-size: 0.75em;
+
+    &--related-articles {
+        ul {
+            margin-left: 1rem;
+            padding-left: 0;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+    }
+}

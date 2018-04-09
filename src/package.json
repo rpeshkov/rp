@@ -1,0 +1,26 @@
+{
+    "name": "rpeshkov.net",
+    "version": "1.0.0",
+    "description": "My personal site markup",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Roman Peshkov <peshkovroman@gmail.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rpeshkov/rpeshkov.net"
+    },
+    "homepage": "https://rpeshkov.net",
+    "license": "ISC",
+    "dependencies": {
+        "bourbon": "^5.0.0",
+        "bourbon-neat": "^2.1.0",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^5.0.0",
+        "gulp-connect": "^5.5.0",
+        "gulp-sass": "^4.0.0",
+        "normalize.css": "^8.0.0"
+    },
+    "devDependencies": {}
+}

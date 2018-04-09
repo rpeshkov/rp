@@ -1,0 +1,19 @@
+.posts {
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.post {
+    display: flex;
+    padding: .25rem 0;
+
+    &__time {
+        flex-basis: 120px;
+    }
+
+    &__link {
+        padding-left: 1rem;
+        flex: 1;
+    }
+}

@@ -1,0 +1,28 @@
+{{ partial "header" . }}
+
+<div class="wrapper content-container">
+    <main class="content">
+        <h1>{{ .Title }}</h1>
+        <div class="meta font_small" style="color: #93a1a1">
+            Posted on
+            {{ if not .Date.IsZero }}
+                <time datetime="{{ .Date.Format ("2006-01-02") -}}">
+                    {{- .Date.Format (.Site.Params.dateform | default "Jan 02, 2006") -}}
+                </time>
+            {{ end }}
+            in
+            {{ with .Params.tags }}
+                {{ range $i, $tag := sort . }}
+                    <a class="meta" href="{{ "/tags/" | relURL }}{{ $tag | urlize }}">#{{ $tag | lower }}</a>
+                {{ end }}
+            {{ end }}
+        </div>
+
+
+        {{ .Content }}
+    </main>
+
+    <!-- {{ partial "sidebar" . }} -->
+</div>
+
+{{ partial "footer" . }}

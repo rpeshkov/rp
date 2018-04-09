@@ -1,0 +1,34 @@
+$mobile-breakpoint: 768px;
+
+$site-width-mobile: 768px;
+$site-width-desktop: 850px;
+
+.header {
+    border-bottom: 1px solid #e1e4e8;
+    background-color: #fafbfc;
+    margin-bottom: 2rem;
+
+    &__in {
+        max-width: $site-width-mobile;
+        // flex-direction: column;
+
+        @media screen and (min-width: $site-width-desktop) {
+            max-width: $site-width-desktop;
+            flex-direction: row;
+        }
+
+        @include margin(0 auto);
+        @include padding(0 2rem);
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer {
+    border-top: 1px solid #e1e4e8;
+    background-color: #fafbfc;
+    margin-top: 2rem;
+    font-size: 0.75em;
+    padding: 1rem;
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+<aside class="sidebar" role="complementary">
+    <div class="widget">
+        <header class="widget__title">Categories:</header>
+        <div class="widget__body">
+            <ul>
+                {{ range $key, $value := .Site.Taxonomies.categories }}
+                <li>
+                    <a href="{{ "/categories/" | relLangURL}}{{ $key | urlize }}">{{ $key }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+
+    <div class="widget">
+        <header class="widget__title">Tags:</header>
+        <div class="widget__body">
+            <ul>
+                 {{ range $key, $value := .Site.Taxonomies.tags }}
+                <li>
+                    <a href="{{ "/tags/" | relLangURL}}{{ $key | urlize }}">{{ $key }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</aside>

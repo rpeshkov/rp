@@ -1,0 +1,35 @@
+<aside class="sidebar sidebar--index" role="complementary">
+    <div class="widget">
+        <div class="widget__body">
+            <img src="{{ .Site.Params.avatar }}" alt="Roman Peshkov" style="max-width: 215px; border-radius: .5rem;">
+        </div>
+    </div>
+
+    <div class="widget">
+        <header class="widget__title">I'm here:</header>
+        <div class="widget__body">
+            {{ if .Site.Params.social }}
+                {{ if .Site.Params.social.vk }}
+                    <a href="https://vk.com/{{.Site.Params.social.vk}}">Vk</a>
+                {{ end }}
+
+                {{ if .Site.Params.social.twitter }}
+                    <a href="https://twitter.com/{{.Site.Params.social.twitter}}/">Twitter</a>
+                {{ end }}
+
+                {{ if .Site.Params.social.github }}
+                    <a href="https://github.com/{{.Site.Params.social.github}}/">GitHub</a>
+                {{ end }}
+
+                {{ if .Site.Params.social.linkedin }}
+                    <a href="https://www.linkedin.com/in/{{.Site.Params.social.linkedin}}/">LinkedIn</a>
+                {{ end }}
+
+                {{ if .Site.Params.social.email }}
+                    <a href="mailto:{{.Site.Params.social.email}}">EMail</a>
+                {{ end }}
+            {{ end }}
+
+        </div>
+    </div>
+</aside>

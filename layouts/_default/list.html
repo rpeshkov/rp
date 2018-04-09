@@ -1,0 +1,23 @@
+{{ partial "header" . }}
+
+<div class="wrapper content-container">
+    <main class="content">
+        <h1>{{ .Title }}</h1>
+        <ul class="posts">
+            {{ range .Data.Pages -}}
+            <li class="post">
+                <time class="post__time" datetime="{{.Date.Format ("2006-01-02")}}">
+                    {{.Date.Format ("02 Jan, 2006")}}
+                </time>
+                »
+                <a class="post__link" href="{{ .Permalink }}">{{ .Title }}</a>
+
+            </li>
+            {{- end }}
+        </ul>
+    </main>
+
+    <!-- {{ partial "blog/sidebar" . }} -->
+</div>
+
+{{ partial "footer" . }}

@@ -1,0 +1,11 @@
+<ul class="navigation__menu">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <!-- {{ jsonify $currentPage}} -->
+        <li class="navigation__item{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} navigation__item--active{{ end }}">
+            <a href="{{ .URL }}"
+            class="navigation__link"
+            title="{{ .Name }}">{{ .Name }}</a>
+        </li>
+    {{ end }}
+</ul>
