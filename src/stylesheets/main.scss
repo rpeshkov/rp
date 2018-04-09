@@ -14,7 +14,7 @@
 
 @import 'code';
 
-small, .font_small {font-size: 0.833em;}
+
 
 .wrapper {
     max-width: $site-width-mobile;
@@ -56,7 +56,6 @@ small, .font_small {font-size: 0.833em;}
             margin-right: 2rem;
         }
 
-
         flex: 0 0 215px;
     }
 
@@ -86,9 +85,8 @@ small, .font_small {font-size: 0.833em;}
     color: $text-color;
     line-height: 0.75;
 
-
     small {
-        font-size: 60%;
+        font-size: modular-scale(-3);
         color: #93a1a1;
     }
 }

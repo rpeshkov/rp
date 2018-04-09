@@ -1,4 +1,10 @@
-$base-font-size: 18px !default;
+$base-font-size: 1.0625em !default;
+
+$bourbon: (
+    'modular-scale-base': $base-font-size,
+    'modular-scale-ratio': $minor-third
+);
+
 $base-font-weight: 400 !default;
 
 // Colors
