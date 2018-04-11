@@ -4,9 +4,10 @@ html {
 }
 
 body {
-    font-family: $font-stack-georgia;
+    // font-family: $font-stack-georgia;
+    font-family: Palatino, "Palatino Linotype", serif;
     font-weight: 400;
-    line-height: 1.45;
+    line-height: 1.4;
     color: $text-color;
     background-color: $bg-color;
 }

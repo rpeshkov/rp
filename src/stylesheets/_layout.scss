@@ -1,7 +1,7 @@
 $mobile-breakpoint: 768px;
 
 $site-width-mobile: 768px;
-$site-width-desktop: 850px;
+$site-width-desktop: 768px;
 
 .header {
     border-bottom: 1px solid #e1e4e8;
@@ -10,7 +10,6 @@ $site-width-desktop: 850px;
 
     &__in {
         max-width: $site-width-mobile;
-        // flex-direction: column;
 
         @media screen and (min-width: $site-width-desktop) {
             max-width: $site-width-desktop;
