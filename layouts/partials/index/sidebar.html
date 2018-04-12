@@ -1,12 +1,10 @@
 <aside class="sidebar sidebar--index" role="complementary">
-    <div class="widget">
-        <div class="widget__body">
-            <img class="avatar" src="{{ .Site.Params.avatar }}" alt="{{ .Site.Title }}">
-        </div>
+    <div class="avatar-container">
+        <img class="avatar" src="{{ .Site.Params.avatar }}" alt="{{ .Site.Title }}">
     </div>
-
     <div class="widget">
-        <div class="widget__body" style="text-align: center">
+            <div class="widget__body" style="text-align: center">
+        <div class="social-list">
             {{ if .Site.Params.social }}
                 {{ if .Site.Params.social.vk }}
                     <a class="social" title="VK" href="https://vk.com/{{.Site.Params.social.vk}}">
@@ -23,19 +21,19 @@
                 {{ if .Site.Params.social.github }}
                     <a class="social" title="GitHub" href="https://github.com/{{.Site.Params.social.github}}/">
                         <i class="fab fa-github"></i>
-                   </a>
+                </a>
                 {{ end }}
 
                 {{ if .Site.Params.social.linkedin }}
                     <a class="social" title="LinkedIn" href="https://www.linkedin.com/in/{{.Site.Params.social.linkedin}}/">
                         <i class="fab fa-linkedin"></i>
-                   </a>
+                </a>
                 {{ end }}
-
             {{ end }}
-            <br>
-            or drop me an email to <a href="mailto:{{.Site.Params.social.email}}">{{.Site.Params.social.email}}</a>
+        </div>
 
+
+            or drop me an email to<br><a href="mailto:{{.Site.Params.social.email}}">{{.Site.Params.social.email}}</a>
         </div>
     </div>
 </aside>
