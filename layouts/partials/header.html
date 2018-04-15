@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ .Hugo.Generator }}
 
     {{ if .IsHome -}}
         <title>{{ .Site.Title }}</title>
@@ -15,27 +16,15 @@
         <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
     {{ end }}
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/brands.css"
-          integrity="sha384-ATC/oZittI09GYIoscTZKDdBr/kI3lCwzw3oBMnOYCPVNJ4i7elNlCxSgLfdfFbl" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/fontawesome.css"
-          integrity="sha384-Lyz+8VfV0lv38W729WFAmn77iH5OSroyONnUva4+gYaQTic3iI2fnUKtDSpbVf0J" crossorigin="anonymous">
-
-    <!-- main -->
-    <link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
-
-    {{ .Hugo.Generator }}
-
-    {{ if .RSSLink }}
-        <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-        <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ end }}
+    {{ partial "head/css" . }}
+    {{ partial "head/rss" . }}
+    {{ partial "head/twitter-card" . }}
 </head>
 
 <body>
-
     <header class="header">
         <div class="header__in">
-            {{ partial "head/logo.html" . }}
+            {{ partial "header/logo.html" . }}
 
             <nav class="navigation">
                 {{ partial "main-menu" . }}
