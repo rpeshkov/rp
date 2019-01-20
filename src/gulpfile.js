@@ -19,6 +19,6 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('../static/css'));
 });
 
-gulp.task('default', ['sass'], function () {
-    gulp.watch([paths.scss], ['sass']);
-});
+gulp.task('default', gulp.series(['sass'], function () {
+    gulp.watch([paths.scss]).on('change', gulp.series(['sass']));
+}));
