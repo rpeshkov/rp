@@ -1,14 +1,14 @@
-var autoprefix = require('gulp-autoprefixer'),
-    gulp = require('gulp'),
-    bourbon = require('bourbon').includePaths,
-    neat = require('bourbon-neat').includePaths,
-    sass = require('gulp-sass');
+const autoprefix = require('gulp-autoprefixer'),
+      gulp = require('gulp'),
+      bourbon = require('bourbon').includePaths,
+      neat = require('bourbon-neat').includePaths,
+      sass = require('gulp-sass');
 
-var paths = {
+const paths = {
     scss: './stylesheets/**/*.scss'
 };
 
-gulp.task('sass', function () {
+gulp.task('sass', () => {
     return gulp.src(['./stylesheets/main.scss'])
         .pipe(sass({
             sourcemaps: true,
@@ -19,6 +19,6 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('../static/css'));
 });
 
-gulp.task('default', gulp.series(['sass'], function () {
+gulp.task('default', gulp.series(['sass'], () => {
     gulp.watch([paths.scss]).on('change', gulp.series(['sass']));
 }));
