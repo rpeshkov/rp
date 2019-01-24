@@ -1,7 +1,4 @@
-$mobile-breakpoint: 768px;
 
-$site-width-mobile: 768px;
-$site-width-desktop: 768px;
 
 .header {
     border-bottom: 1px solid #e1e4e8;
@@ -14,10 +11,14 @@ $site-width-desktop: 768px;
         @media screen and (min-width: $site-width-desktop) {
             max-width: $site-width-desktop;
             flex-direction: row;
+            @include padding(0 2rem);
+        }
+
+        @media screen and (max-width: $site-width-desktop) {
+            @include padding(0 1rem);
         }
 
         @include margin(0 auto);
-        @include padding(0 2rem);
         display: flex;
         justify-content: space-between;
     }

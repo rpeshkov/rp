@@ -1,12 +1,18 @@
 html {
-    font-size: $base-font-size;
+    @media screen and (min-width: $site-width-desktop) {
+        font-size: $base-font-size;
+    }
+
+    @media screen and (max-width: $site-width-desktop) {
+        font-size: 1em;
+    }
+    // font-size: 1em;
     overflow-y: scroll;
 }
 
 body {
-    // font-family: $font-stack-georgia;
     font-family: Palatino, "Palatino Linotype", serif;
-    font-weight: 400;
+    font-weight: $base-font-weight;
     line-height: 1.4;
     color: $text-color;
     background-color: $bg-color;

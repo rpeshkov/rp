@@ -22,10 +22,15 @@
     @media screen and (min-width: $site-width-desktop) {
         max-width: $site-width-desktop;
         flex-direction: row;
+        @include padding(0 2rem);
+    }
+
+    @media screen and (max-width: $site-width-desktop) {
+        @include padding(0 1rem);
     }
 
     @include margin(0 auto);
-    @include padding(0 2rem);
+
     display: flex;
     justify-content: space-between;
 }

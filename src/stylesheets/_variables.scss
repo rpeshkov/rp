@@ -1,4 +1,16 @@
+$mobile-breakpoint: 768px;
+
+$site-width-mobile: 768px;
+$site-width-desktop: 768px;
+
 $base-font-size: 1.125em !default;
+
+// @media screen and (min-width: $site-width-desktop) {
+//     $base-font-size: 1.125em !default;
+// }
+// @media screen and (max-width: $site-width-desktop) {
+// }
+
 
 $bourbon: (
     'modular-scale-base': $base-font-size,
