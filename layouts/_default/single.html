@@ -3,7 +3,7 @@
 <div class="wrapper content-container">
     <main class="content">
         <h1>{{ .Title }}</h1>
-        <div class="meta font_small" style="color: #93a1a1">
+        <div class="meta font_small">
             Posted on
             {{ if not .Date.IsZero }}
                 <time datetime="{{ .Date.Format ("2006-01-02") -}}">

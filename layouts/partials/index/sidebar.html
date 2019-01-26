@@ -1,39 +1,26 @@
 <aside class="sidebar sidebar--index" role="complementary">
-    <div class="avatar-container">
-        <img class="avatar" src="{{ .Site.Params.avatar }}" alt="{{ .Site.Title }}">
-    </div>
-    <div class="widget">
-            <div class="widget__body" style="text-align: center">
-        <div class="social-list">
-            {{ if .Site.Params.social }}
-                {{ if .Site.Params.social.vk }}
-                    <a class="social" title="VK" href="https://vk.com/{{.Site.Params.social.vk}}">
-                        <i class="fab fa-vk"></i>
-                    </a>
-                {{ end }}
 
-                {{ if .Site.Params.social.twitter }}
-                    <a class="social" title="Twitter" href="https://twitter.com/{{.Site.Params.social.twitter}}/">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                {{ end }}
+    <img class="avatar" src="{{ .Site.Params.avatar }}" alt="{{ .Site.Title }}">
 
-                {{ if .Site.Params.social.github }}
-                    <a class="social" title="GitHub" href="https://github.com/{{.Site.Params.social.github}}/">
-                        <i class="fab fa-github"></i>
-                </a>
-                {{ end }}
-
-                {{ if .Site.Params.social.linkedin }}
-                    <a class="social" title="LinkedIn" href="https://www.linkedin.com/in/{{.Site.Params.social.linkedin}}/">
-                        <i class="fab fa-linkedin"></i>
-                </a>
-                {{ end }}
+    <div class="contacts">
+        {{ if .Site.Params.social }}
+            {{ if .Site.Params.social.twitter }}
+            <a href="https://twitter.com/{{.Site.Params.social.twitter}}" title="Twitter">Twitter</a>
             {{ end }}
-        </div>
 
+            {{ if .Site.Params.social.github }}
+            <a href="https://github.com/{{.Site.Params.social.github}}" title="GitHub">GitHub</a>
+            {{ end }}
 
-            or drop me an email to<br><a href="mailto:{{.Site.Params.social.email}}">{{.Site.Params.social.email}}</a>
-        </div>
+            {{ if .Site.Params.social.linkedin }}
+            <a href="https://www.linkedin.com/in/{{.Site.Params.social.linkedin}}" title="LinkedIn">LinkedIn</a>
+            {{ end }}
+        {{ end }}
+
+        <br>
+
+        or drop me an email to
+        <br>
+        <a href="mailto:{{.Site.Params.social.email}}">{{.Site.Params.social.email}}</a>
     </div>
 </aside>

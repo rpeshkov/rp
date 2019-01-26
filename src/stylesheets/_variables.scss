@@ -1,31 +1,17 @@
-$site-width: 768px;
+$site-width: 650px;
 
-@mixin mobile {
-    @media screen and (max-width: $site-width) {
-        @content;
-    }
-}
-
-@mixin desktop {
-    @media screen and (min-width: $site-width) {
-        @content;
-    }
-}
-
-$site-width-mobile: 768px;
-$site-width-desktop: 768px;
-
-$base-font-size: 1.1rem !default;
-$serif-font: Palatino, "Palatino Linotype", serif;
-$mono-font: Menlo, Consolas, monospace;
+$base-font-size: 1rem !default;
+$sans-font: sans-serif;
+$serif-font: Merriweather, Palatino, "Palatino Linotype", serif;
+$mono-font: 'IBM Plex Mono', Menlo, Consolas, monospace;
 
 $bourbon: (
     'modular-scale-base': $base-font-size,
-    'modular-scale-ratio': $minor-third
+    'modular-scale-ratio': $major-second
 );
 
 $base-font-weight: 400 !default;
-$base-line-height: 1.4 !default;
+$base-line-height: 1.7 !default;
 
 // Colors
 $text-color: #073642 !default;
@@ -34,6 +20,7 @@ $link-color: #268bd2 !default;
 $link-hover-color: darken($color: #268bd2, $amount: 10) !default;
 $blockquote-bg: #eee8d5;
 $code-color: #859900;
+$muted-color: #93a1a1;
 
 
 // Content

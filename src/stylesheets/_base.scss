@@ -1,9 +1,9 @@
 html {
     @include desktop() {
-        font-size: $base-font-size;
+        font-size: 16px;
     }
     @include mobile() {
-        font-size: 1rem; // TODO: extract to variable
+        font-size: 14px; // TODO: extract to variable
     }
     overflow-y: scroll;
 }
@@ -14,17 +14,18 @@ body {
     line-height: $base-line-height;
     color: $text-color;
     background-color: $bg-color;
+    -webkit-font-smoothing: antialias;
 }
 
 p {
     font-size: modular-scale(0);
-    margin-bottom: 1.3em;
+    margin-bottom: 1.3rem;
     text-align: justify;
 
     >code {
-        font-family: $mono-font;
-        font-size: modular-scale(-2);
         color: $code-color;
+        font-size: modular-scale(0);
+        line-height: $base-line-height;
     }
 }
 
@@ -38,12 +39,24 @@ a {
 
 pre, code {
     font-family: $mono-font;
-    font-size: .7rem; // modular-scale(-2);
+}
+
+pre {
+    font-size: 12px;
+    line-height: 1.5;
 }
 
 blockquote {
-    margin: auto 0;
-    padding: 1rem 2rem;
+    @include desktop() {
+        margin: auto 0;
+        padding: 1rem;
+    }
+
+    @include mobile() {
+        margin: auto -1rem;
+        padding: 1rem;
+    }
+
     font-style: italic;
     background-color: $blockquote-bg;
 
@@ -77,4 +90,8 @@ img {
 .content img {
     display: block;
     margin: 0 auto;
+}
+
+.content .meta {
+    color: $muted-color;
 }
