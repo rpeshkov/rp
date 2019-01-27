@@ -13,7 +13,7 @@
             in
             {{ with .Params.tags }}
                 {{ range $i, $tag := sort . }}
-                    <a class="meta" href="{{ "/tags/" | relURL }}{{ $tag | urlize }}">#{{ $tag | lower }}</a>
+                    <a href="{{ "/tags/" | relURL }}{{ $tag | urlize }}">#{{ $tag | lower }}</a>
                 {{ end }}
             {{ end }}
         </div>

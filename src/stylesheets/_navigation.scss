@@ -9,6 +9,10 @@
         list-style: none;
         display: flex;
         flex: 1;
+
+        @include mobile() {
+            justify-content: center;
+        }
     }
 
     &__item {

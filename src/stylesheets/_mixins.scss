@@ -9,3 +9,7 @@
         @content;
     }
 }
+
+@function separator($style) {
+    @return 1px #{$style} #{$separator-color}
+  }

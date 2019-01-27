@@ -1,7 +1,6 @@
-$site-width: 650px;
+$site-width: 768px;
 
 $base-font-size: 1rem !default;
-$sans-font: sans-serif;
 $serif-font: Merriweather, Palatino, "Palatino Linotype", serif;
 $mono-font: 'IBM Plex Mono', Menlo, Consolas, monospace;
 
@@ -21,6 +20,8 @@ $link-hover-color: darken($color: #268bd2, $amount: 10) !default;
 $blockquote-bg: #eee8d5;
 $code-color: #859900;
 $muted-color: #93a1a1;
+
+$separator-color: #e1e4e8;
 
 
 // Content

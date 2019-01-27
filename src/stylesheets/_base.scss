@@ -1,4 +1,16 @@
 html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
     @include desktop() {
         font-size: 16px;
     }
@@ -14,7 +26,8 @@ body {
     line-height: $base-line-height;
     color: $text-color;
     background-color: $bg-color;
-    -webkit-font-smoothing: antialias;
+    display: flex;
+    flex-direction: column;
 }
 
 p {
@@ -25,7 +38,6 @@ p {
     >code {
         color: $code-color;
         font-size: modular-scale(0);
-        line-height: $base-line-height;
     }
 }
 
@@ -88,10 +100,12 @@ img {
 }
 
 .content img {
-    display: block;
-    margin: 0 auto;
-}
+    img {
+        display: block;
+        margin: 0 auto;
+    }
 
-.content .meta {
-    color: $muted-color;
+    .meta {
+        color: $muted-color;
+    }
 }

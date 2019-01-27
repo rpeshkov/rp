@@ -1,31 +1,22 @@
 .header {
-    border-bottom: 1px solid #e1e4e8;
+    border-bottom: separator(solid);
     background-color: #fafbfc;
     margin-bottom: 2rem;
 
-    &__in {
-        @include margin(0 auto);
-
-        display: flex;
-
-        max-width: $site-width;
-        justify-content: space-between;
-
-        @include desktop() {
-            @include padding(0 2rem);
-        }
-
-        @include mobile() {
-            @include padding(0 1rem);
-        }
+    @include mobile() {
+        margin-bottom: 1rem;
     }
 }
 
 .footer {
-    border-top: 1px solid #e1e4e8;
+    border-top: separator(solid);
     background-color: #fafbfc;
     margin-top: 2rem;
+    @include mobile() {
+        margin-top: 1rem;
+    }
     font-size: modular-scale(-3);
     padding: 1rem;
     text-align: center;
+    flex-shrink: 0;
 }

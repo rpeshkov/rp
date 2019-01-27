@@ -9,10 +9,11 @@
 
 @import 'blog';
 
-@import 'components/navigation';
+@import 'navigation';
 
 .wrapper {
     max-width: $site-width;
+    width: 100%;
     margin: 0 auto;
     display: flex;
 
@@ -29,9 +30,7 @@
 }
 
 .content-container {
-    flex: 1;
-    // min-height: 70%;
-    // min-height: calc(100vh - 62px - 55px - 4rem);
+    flex: 1 0 auto;
 }
 
 .content {
@@ -47,7 +46,7 @@
     display: flex;
     flex-flow: column;
     flex: 0 0;
-    border-bottom: 1px dotted #ddd;
+    border-bottom: separator(dotted);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 
@@ -62,7 +61,7 @@
 }
 
 .contacts {
-    border-top: 1px dotted #ddd;
+    border-top: separator(dotted);
     padding-top: 1rem;
     text-align: center;
     font-size: modular-scale(-2);
@@ -72,6 +71,11 @@
     align-self: center;
     color: $text-color;
     line-height: 1;
+
+    @include mobile() {
+        text-align: center;
+        margin-top: 1rem;
+    }
 
     small {
         font-size: modular-scale(-3);
@@ -88,9 +92,9 @@
 
 .highlight > pre {
     padding: 1rem;
+    overflow: auto;
 
     @include mobile() {
         margin: 0 -1rem;
     }
-    overflow: auto;
 }
