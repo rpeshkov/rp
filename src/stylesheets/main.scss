@@ -40,6 +40,15 @@
     p:first-child {
         margin-top: 0;
     }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .meta {
+        color: $muted-color;
+    }
 }
 
 .sidebar {

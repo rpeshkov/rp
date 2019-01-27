@@ -1,7 +1,6 @@
 .posts {
     padding: 0;
     list-style: none;
-    width: 100%;
 }
 
 .post {
@@ -18,13 +17,12 @@
             display: none;
         }
 
-        margin-right: 1rem;
+        margin: 0 1rem 0 .5rem;
         display: inline-block;
     }
 
     &__time {
-        margin-right: 1rem;
-        width: 7rem;
+        width: 6.9rem;
     }
 
     &__link {
