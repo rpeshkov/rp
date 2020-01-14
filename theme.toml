@@ -8,7 +8,7 @@ description = "Hugo theme for my personal blog"
 homepage = "http://github.com/rpeshkov/rp"
 tags = ["blog", "personal"]
 features = []
-min_version = "0.38"
+min_version = "0.43"
 
 [author]
   name = "Roman Peshkov"
