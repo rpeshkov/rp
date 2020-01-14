@@ -1,6 +1,8 @@
-<!-- <link href="https://fonts.googleapis.com/css?family=Merriweather|IBM+Plex+Mono" rel="stylesheet"> -->
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Merriweather:400,400i,700" rel="stylesheet">
-<!-- <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet"> -->
 
 <!-- main -->
-<link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
+{{ $includePaths := (slice "node_modules/bourbon/core" "node_modules/bourbon-neat/core" "node_modules/normalize.css") }}
+{{ $options := (dict "includePaths" $includePaths "outputStyle" "compressed") }}
+{{ $scss := resources.Get "styles/main.scss" }}
+{{ $style := $scss | resources.ToCSS $options }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
